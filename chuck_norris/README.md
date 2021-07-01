@@ -68,3 +68,50 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+# Chuck Norris
+
+Необходимо создать страничку, с отображением категорий и цитаты от Чака Норриса.
+
+## Что нужно сделать:
+
+· Header с лого и текстом (Логотип получите с сервера).
+
+· Отобразить категории полученные с сервера.
+
+· Отобразить случайную цитату Чака Норриса полученную с сервера.
+
+· При клике на категорию цитата динамически должна меняться на цитату из данной категории.
+
+## Требования:
+
+· Срок выполнения задания - 7 дней.
+
+· Использование React.
+
+· Код должен быть опубликован на github.
+
+· Приложение не должно ломаться и выводить ошибки в консоль.
+
+· Разрешено использовать любые сторонние библиотеки для выполнения задания.
+
+Информация про дизайн и сервер можно найти в пункте "Материалы"
+
+## Будет плюсом:
+
+· Использование Typescript.
+
+· Написание Unit тестов.
+
+## Особое внимание будет уделено:
+
+· Правильному использованию библиотеки React.
+
+· Качеству и структуре кода.
+
+## Материалы: 
+· Design https://www.figma.com/file/ed8dWuE8nGApYkLBioNPH3/Chuck-Norris?node-id=0%3A1 
+
+· API Chuck Norris Jokes Api

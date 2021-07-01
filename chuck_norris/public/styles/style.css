@@ -11,6 +11,7 @@ header {
     display: flex;
     background-color: #422ED4;
     height: 59px;
+    margin-bottom: 10px;
 }
 
 .logo-wrapper {
@@ -51,16 +52,17 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 0;
+    margin-bottom: 2px;
 }
 
 .categories-title {
     display: block;
-    font-family: Raleway;
+    margin: 0;
+    font-family: "Raleway";
     font-style: normal;
     font-weight: 800;
     font-size: 50px;
-    line-height: 59px;
+    line-height: 159px;
     color: #1C1C39;
 }
 
@@ -74,10 +76,10 @@ main {
 }
 
 .category-name {
-    margin: 10px 10px;
+    margin: 10px;
     display: flex;
     width: 170px;
-    height: 59px;
+    height: 57px;
     align-items: center;
     justify-content: center;
     font-family: Raleway;
@@ -109,17 +111,18 @@ main {
 }
 
 .quote-logo {
-    margin-right: 184px;
+    margin-right: 182px;
     position: relative;
     z-index: 1;
-    width: 122px;
+    width: 128px;
     height: 258px;
 }
 
 .quote-text {
     position: relative;
     top: -107px;
-    height: 144px;
+    height: 162px;
+    width: calc(100% - 160px * 2);
     margin: 2px 160px;
     z-index: 2;
     background-color: #422ED4;
