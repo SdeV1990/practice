@@ -1,0 +1,27 @@
+header {
+    display: flex;
+    background-color: blue;
+    height: 59px;
+}
+
+.logo-wrapper {
+    margin-left: 160px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo-image {
+    width: 43px;
+    height: 43px;
+}
+
+.logo-text {
+    margin-left: 10px;
+    color: #FFFFFF;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 19px;
+}
