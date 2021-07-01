@@ -1,27 +1,135 @@
+/* Another wrapper style is in ""./routine.css" */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*   ********* HEADER *********   */
+
 header {
     display: flex;
-    background-color: blue;
+    background-color: #422ED4;
     height: 59px;
 }
 
 .logo-wrapper {
-    margin-left: 160px;
     display: flex;
     flex-direction: row;
-    align-items: center;
-}
+    align-items: top;
+    height: 43px;
+    margin: 8px 0 8px 160px;
+} 
 
 .logo-image {
     width: 43px;
     height: 43px;
 }
 
-.logo-text {
-    margin-left: 10px;
+.logo-name {
+    margin: 10px;
     color: #FFFFFF;
-    font-family: "Raleway";
+    font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 16px;
     line-height: 19px;
+}
+
+
+/*   ********* MAIN *********   */
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.categories-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+}
+
+.categories-title {
+    display: block;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 59px;
+    color: #1C1C39;
+}
+
+.categories-names-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 150px 0;
+}
+
+.category-name {
+    margin: 10px 10px;
+    display: flex;
+    width: 170px;
+    height: 59px;
+    align-items: center;
+    justify-content: center;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1C1C39;
+    background: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 0 57px #E5E5E5;
+    transition: ease 0.5s;
+}
+
+.category-name:hover {
+    background: #422ED4;
+    color: #FFFFFF;
+    cursor: url("./cursor.svg"), auto;
+}
+
+
+/*   ********* QUOTE *********   */
+
+.quote-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.quote-logo {
+    margin-right: 184px;
+    position: relative;
+    z-index: 1;
+    width: 122px;
+    height: 258px;
+}
+
+.quote-text {
+    position: relative;
+    top: -107px;
+    height: 144px;
+    margin: 2px 160px;
+    z-index: 2;
+    background-color: #422ED4;
+    padding: 24px;
+    box-shadow: 0px 100px 80px rgba(80, 76, 103, 0.07), 0px 0px 10.0172px rgba(80, 76, 103, 0.035);
+    border-radius: 25px;
+    color: #FFFFFF;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
 }
