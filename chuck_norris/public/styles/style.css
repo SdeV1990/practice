@@ -4,37 +4,43 @@
     flex-direction: column;
 }
 
+/* Make styles for big monitors */
+:root {
+    /* Base size: 1440*920, px */
+    --coefficient_width: calc(100vw / 1440);
+
+}
 
 /*   ********* HEADER *********   */
 
 header {
     display: flex;
     background-color: #422ED4;
-    height: 59px;
-    margin-bottom: 10px;
+    height: calc(59 * var(--coefficient_width));
+    margin-bottom: calc(10 * var(--coefficient_width));
 }
 
 .logo-wrapper {
     display: flex;
     flex-direction: row;
     align-items: top;
-    height: 43px;
-    margin: 8px 0 8px 160px;
+    height: calc(43 * var(--coefficient_width));
+    margin: calc(8 * var(--coefficient_width)) 0 calc(8 * var(--coefficient_width)) calc(160 * var(--coefficient_width));
 } 
 
 .logo-image {
-    width: 43px;
-    height: 43px;
+    width: calc(43 * var(--coefficient_width));
+    height: calc(43 * var(--coefficient_width));
 }
 
 .logo-name {
-    margin: 10px;
+    margin: calc(10 * var(--coefficient_width));
     color: #FFFFFF;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 800;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: calc(16 * var(--coefficient_width));
+    line-height: calc(19 * var(--coefficient_width));
 }
 
 
@@ -52,7 +58,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 2px;
+    margin-bottom: calc(2 * var(--coefficient_width));
 }
 
 .categories-title {
@@ -61,8 +67,8 @@ main {
     font-family: "Raleway";
     font-style: normal;
     font-weight: 800;
-    font-size: 50px;
-    line-height: 159px;
+    font-size: calc(50 * var(--coefficient_width));
+    line-height: calc(159 * var(--coefficient_width));
     color: #1C1C39;
 }
 
@@ -72,25 +78,25 @@ main {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: 0 150px 0;
+    margin: 0 calc(150 * var(--coefficient_width)) 0;
 }
 
 .category-name {
-    margin: 10px;
+    margin: calc(10 * var(--coefficient_width));
     display: flex;
-    width: 170px;
-    height: 57px;
+    width: calc(170 * var(--coefficient_width));
+    height: calc(57 * var(--coefficient_width));
     align-items: center;
     justify-content: center;
     font-family: "Raleway";
     font-style: normal;
     font-weight: 800;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: calc(16 * var(--coefficient_width));
+    line-height: calc(19 * var(--coefficient_width));
     color: #1C1C39;
     background: #FFFFFF;
-    border-radius: 20px;
-    box-shadow: 0 0 57px #E5E5E5;
+    border-radius: calc(20 * var(--coefficient_width));
+    box-shadow: 0 0 calc(57 * var(--coefficient_width)) #E5E5E5;
     transition: ease 0.5s;
 }
 
@@ -111,30 +117,31 @@ main {
 }
 
 .quote-logo {
-    margin-right: 182px;
+    margin-right: calc(182 * var(--coefficient_width));
     position: relative;
     z-index: 1;
-    width: 128px;
-    height: 258px;
+    width: calc(128 * var(--coefficient_width))px;
+    height: calc(258 * var(--coefficient_width));
 }
 
 .quote-text {
     
-    height: 162px; /* For the Glory of Pixel Perfect! */
+    height: calc(162 * var(--coefficient_width)); /* For the Glory of Pixel Perfect! */
 
     position: relative;
-    top: -107px;
-    width: calc(100% - 160px * 2);
-    margin: 2px 160px;
+    top: calc(-107 * var(--coefficient_width));
+    width: calc(100% - 160 * var(--coefficient_width) * 2);
+    margin: calc(2 * var(--coefficient_width)) calc(160 * var(--coefficient_width));
     z-index: 2;
     background-color: #422ED4;
-    padding: 24px;
-    box-shadow: 0px 100px 80px rgba(80, 76, 103, 0.07), 0px 0px 10.0172px rgba(80, 76, 103, 0.035);
-    border-radius: 25px;
+    padding: calc(24 * var(--coefficient_width));
+    box-shadow: 0px calc(100 * var(--coefficient_width)) calc(80 * var(--coefficient_width)) rgba(80, 76, 103, 0.07), 
+                0px 0px calc(10.0172 * var(--coefficient_width)) rgba(80, 76, 103, 0.035);
+    border-radius: calc(25 * var(--coefficient_width));
     color: #FFFFFF;
     font-family: Raleway;
     font-style: normal;
     font-weight: 600;
-    font-size: 20px;
+    font-size: calc(20 * var(--coefficient_width));
     line-height: 150%;
 }
