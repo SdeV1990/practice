@@ -1,5 +1,10 @@
 import axios from 'axios'
 
-const url = 'https://api.chucknorris.io/jokes/random'
+const url = 'https://api.chucknorris.io/jokes/'
 
-export const getJoke = () => axios.get(url)
+
+// Get joke by category or random
+export const getQuote = (category) => axios.get(url + ( category && category !== 'random' ? `random?category=${category}` : 'random') )
+
+// Get categories
+export const getCategories = () => axios.get(url + 'categories')

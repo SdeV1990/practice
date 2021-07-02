@@ -1,13 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
 
 // Components
 import Category from './Category/Category'
 
+import getCategories from '../../../actions/categories'
+
 const Categories = () => {
 
-    // Array of categories
-    const categoriesEnumeration = ["animal","career","celebrity","dev","explicit","fashion","food","history","money","movie","music","political","religion","science","sport","travel", "random"]
+    // Make a request for categories from server
+    const dispatch = useDispatch()
+    useEffect( () => {
+        dispatch( getCategories() )
+    }, [dispatch])
 
+    // Get array of categories from Resux
+    const categoriesEnumeration = useSelector( (state) => state.categories )
+    
     return (
         <div className="categories-wrapper">
             <h1 className="categories-title">Categories</h1>

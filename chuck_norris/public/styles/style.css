@@ -82,7 +82,7 @@ main {
     height: 57px;
     align-items: center;
     justify-content: center;
-    font-family: Raleway;
+    font-family: "Raleway";
     font-style: normal;
     font-weight: 800;
     font-size: 16px;
@@ -119,9 +119,11 @@ main {
 }
 
 .quote-text {
+    
+    height: 162px; /* For the Glory of Pixel Perfect! */
+
     position: relative;
     top: -107px;
-    height: 162px;
     width: calc(100% - 160px * 2);
     margin: 2px 160px;
     z-index: 2;

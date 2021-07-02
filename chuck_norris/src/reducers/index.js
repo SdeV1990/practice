@@ -1,5 +1,6 @@
 import { combineReducers } from "redux"
 
-import jokes from './jokes'
+import quote from './quote'
+import categories from './categories'
 
-export default combineReducers({ jokes })
+export default combineReducers({ quote, categories })

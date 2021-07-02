@@ -6,14 +6,15 @@ import Header from './components/Header/Header'
 import Main from './components/Main/Main'
 
 // Actions
-import getJoke from './actions/jokes'
+import getQuote from './actions/quote'
 
 const App = () => {
-    const dispatch = useDispatch()
 
+    // Make a request for a quote from server
+    const dispatch = useDispatch()
     useEffect(() => {
-        dispatch(getJoke())
-    }, [])
+        dispatch(getQuote())
+    }, [dispatch])
 
     return (
         <div className='wrapper'>
