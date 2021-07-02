@@ -8,8 +8,10 @@
 :root {
     /* Base size: 1440*920, px */
     --coefficient_width: calc(100vw / 1440);
-
 }
+
+
+
 
 /*   ********* HEADER *********   */
 
@@ -25,7 +27,10 @@ header {
     flex-direction: row;
     align-items: top;
     height: calc(43 * var(--coefficient_width));
-    margin: calc(8 * var(--coefficient_width)) 0 calc(8 * var(--coefficient_width)) calc(160 * var(--coefficient_width));
+    margin: calc(8 * var(--coefficient_width)) 
+            0 
+            calc(8 * var(--coefficient_width)) 
+            calc(160 * var(--coefficient_width));
 } 
 
 .logo-image {
@@ -36,12 +41,15 @@ header {
 .logo-name {
     margin: calc(10 * var(--coefficient_width));
     color: #FFFFFF;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: calc(16 * var(--coefficient_width));
     line-height: calc(19 * var(--coefficient_width));
 }
+
+
+
 
 
 /*   ********* MAIN *********   */
@@ -70,6 +78,7 @@ main {
     font-size: calc(50 * var(--coefficient_width));
     line-height: calc(159 * var(--coefficient_width));
     color: #1C1C39;
+    z-index: 2;
 }
 
 .categories-names-container {
@@ -78,7 +87,8 @@ main {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: 0 calc(150 * var(--coefficient_width)) 0;
+    margin: 0 
+            calc(150 * var(--coefficient_width));
 }
 
 .category-name {
@@ -107,10 +117,14 @@ main {
 }
 
 
+
+
+
 /*   ********* QUOTE *********   */
 
 .quote-wrapper{
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: flex-end;
     width: 100%;
@@ -118,30 +132,222 @@ main {
 
 .quote-logo {
     margin-right: calc(182 * var(--coefficient_width));
-    position: relative;
+    position: absolute;
     z-index: 1;
-    width: calc(128 * var(--coefficient_width))px;
+    width: calc(128 * var(--coefficient_width));
     height: calc(258 * var(--coefficient_width));
 }
 
 .quote-text {
-    
-    height: calc(162 * var(--coefficient_width)); /* For the Glory of Pixel Perfect! */
-
+    min-height: calc(162 * var(--coefficient_width));
     position: relative;
-    top: calc(-107 * var(--coefficient_width));
+    top: 0;
     width: calc(100% - 160 * var(--coefficient_width) * 2);
-    margin: calc(2 * var(--coefficient_width)) calc(160 * var(--coefficient_width));
+    margin: calc(152 * var(--coefficient_width))
+            calc(160 * var(--coefficient_width))
+            0;
+            
     z-index: 2;
     background-color: #422ED4;
     padding: calc(24 * var(--coefficient_width));
-    box-shadow: 0px calc(100 * var(--coefficient_width)) calc(80 * var(--coefficient_width)) rgba(80, 76, 103, 0.07), 
-                0px 0px calc(10.0172 * var(--coefficient_width)) rgba(80, 76, 103, 0.035);
+    box-shadow: 0px 
+                calc(100 * var(--coefficient_width)) 
+                calc(80 * var(--coefficient_width)) 
+                rgba(80, 76, 103, 0.07)
+                , 
+                0px 
+                0px 
+                calc(10.0172 * var(--coefficient_width)) 
+                rgba(80, 76, 103, 0.035);
+
     border-radius: calc(25 * var(--coefficient_width));
     color: #FFFFFF;
-    font-family: Raleway;
+    font-family: "Raleway";
     font-style: normal;
     font-weight: 600;
     font-size: calc(20 * var(--coefficient_width));
     line-height: 150%;
+}
+
+
+
+
+
+/*   ********* ADAPTIVE MARKUP *********   */
+
+@media (max-width: 1439px) { 
+    /* Decreace right and left margin from 160px on screen width equal 1440px to 10px on screen 1024px.
+    Use equasion: margin = 75 / 208 * 100vw - 4670 / 13
+                  margin = 0.360576923 * 100vw - 359.2307692
+
+    */
+    :root {
+        --margin: calc(0.360576923 * 100vw - 359.2307692px);
+    }
+    
+
+    /*   ********* HEADER *********   */
+    
+    .logo-wrapper {
+        margin-left: var(--margin);
+    }
+
+    /*   ********* MAIN *********   */
+    .categories-names-container {
+        margin: 0 
+                calc(var(--margin) - 10px);
+    }
+
+    /*   ********* QUOTE *********   */
+    .quote-text {
+        width: calc(100% - var(--margin) * 2);
+        margin: calc(152 * var(--coefficient_width)) 
+                var(--margin)
+                0;
+    }
+
+}
+
+
+
+
+
+@media (max-width: 1023px) { 
+    /* FIXING SIZES */
+    /* Values fixed on value of variable --coefficient_width then width of screen is 1080px => 1080/1440 = 0.75 */
+
+    /*   ********* HEADER *********   */
+    header {
+        height: 44.25px;
+    }
+
+    .logo-wrapper {
+        height: 32.25px;
+        margin: 6px
+                0 
+                6px
+                calc(160 * var(--coefficient_width));
+    }
+
+    .logo-image {
+        width: 32.25px;
+        height: 32.25px;
+    }
+
+    .logo-name {
+        margin: 7.5px;
+        font-size: 12px;
+        line-height: 14.25px;
+    }
+
+
+
+    /*   ********* MAIN *********   */
+    .categories-wrapper {
+        margin-bottom: 1.5px;
+    }
+
+    .categories-title {
+        font-size: 37.5px;
+        line-height: 119.25px;
+    }
+
+    .category-name {
+        margin: 7.5px;
+        width: 127.5px;
+        height: 42.75px;
+        font-size: 12px;
+        line-height: 14.25px;
+        border-radius: 15px;
+        box-shadow: 0 0 42.75px #E5E5E5;
+    }
+
+
+
+    /*   ********* QUOTE *********   */
+    .quote-logo {
+        width: 96px;
+        height: 193.5px;
+    }
+
+    .quote-text {
+        min-height: 121.5px;
+        padding: 18px;
+        box-shadow: 0px 
+                    75px 
+                    60px
+                    rgba(80, 76, 103, 0.07)
+                    , 
+                    0px 
+                    0px 
+                    7.5px
+                    rgba(80, 76, 103, 0.035);
+    
+        border-radius: 18.75px;
+        font-size: 12px;
+        margin: 114px
+                var(--margin)
+                0;
+    }
+
+}
+
+
+
+
+
+@media (max-width: 1023px) { 
+    /* FIXING MARGIN */
+    
+
+    /*   ********* HEADER *********   */
+    
+    .logo-wrapper {
+        margin-left: 10px;
+    }
+
+    /*   ********* MAIN *********   */
+    .categories-names-container {
+        margin: 0;
+    }
+
+    .category-name {
+        margin: 5px;
+    }
+
+    /*   ********* QUOTE *********   */
+    .quote-text {
+        width: calc(100% - 20px);
+        margin: 114px
+                10px
+                0;
+    }
+
+}
+
+
+
+
+
+@media (max-width: 425px), (max-height: 425px) { 
+    /* FIXING MARGIN */
+    
+
+    /*   ********* HEADER *********   */
+
+    /*   ********* MAIN *********   */
+    .categories-title {
+        line-height: 45px;
+    }
+
+    .category-name {
+        margin: 3px;
+        padding: 12px;
+        width: max-content;
+    }
+
+    /*   ********* QUOTE *********   */
+    .quote-text {
+        min-height: auto;
+    }
 }

@@ -1,7 +1,7 @@
 import * as api from '../api'
 
 // Get quote from server
-const getQuote = (category) => async (dispatch) => {
+const getQuote = ( category ) => async ( dispatch ) => {
     
     try {
 
@@ -9,10 +9,10 @@ const getQuote = (category) => async (dispatch) => {
         dispatch({ type: 'FETCH_JOKE_PENDING' })
         
         // Get data from server
-        const {data} = await api.getQuote(category)
+        const { data } = await api.getQuote(category)
 
         // Set success status
-        dispatch({ type: 'FETCH_JOKE_SUCCESS', payload: data.value})
+        dispatch({ type: 'FETCH_JOKE_SUCCESS', payload: data.value })
 
     }
     catch (error) {

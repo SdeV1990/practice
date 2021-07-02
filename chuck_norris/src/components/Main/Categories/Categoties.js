@@ -8,8 +8,9 @@ import getCategories from '../../../actions/categories'
 
 const Categories = () => {
 
-    // Make a request for categories from server
     const dispatch = useDispatch()
+    
+    // Make a request for categories from server
     useEffect( () => {
         dispatch( getCategories() )
     }, [dispatch])

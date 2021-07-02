@@ -10,8 +10,9 @@ import getQuote from './actions/quote'
 
 const App = () => {
 
-    // Make a request for a quote from server
     const dispatch = useDispatch()
+    
+    // Make a request for a quote from server
     useEffect(() => {
         dispatch(getQuote())
     }, [dispatch])

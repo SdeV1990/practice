@@ -1,13 +1,7 @@
 const quote = ( quote = "", action ) => {
 
-    // console.log('reducer')
-    // console.log(action)
-
     // Set quote
     if (action.type === 'FETCH_JOKE_SUCCESS') {
-
-        console.log(action.payload)
-        
 
         // Change first letter to upper case
         function ucFirst(str) {
@@ -23,15 +17,11 @@ const quote = ( quote = "", action ) => {
         const lastSymbol = text[text.length - 1]
         if ( lastSymbol !== '.' && lastSymbol !== '!' && lastSymbol !== '?' ) {
             text = text + '.'
-            console.log('Added point.')
         }
-            
-        console.log(text)
 
         return text
     }
 
-    // console.log('Unknown action type')
     return quote
 }
 
