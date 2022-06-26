@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <header>
             <div className="logo-wrapper">
-                <img className="logo-image" src="https://assets.chucknorris.host/img/avatar/chuck-norris.png" alt="logo"/>
+                <img className="logo-image" src="/img/logo.png" alt="logo"/>
                 <div className="logo-name">Chuck Norris</div>
             </div>
         </header>
